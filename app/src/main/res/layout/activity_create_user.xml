@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="false"
+    android:scrollbars="vertical">
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.danielj.springadsandroid.CreateUserActivity">
+
+        <android.support.v7.widget.Toolbar xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/toolbarNewUser"
+            style="@style/Widget.MyApp.Toolbar.Solid"
+            android:layout_width="416dp"
+            android:layout_height="56dp"
+            android:background="?attr/colorPrimary"
+            android:elevation="4dp"
+            android:theme="@style/ThemeOverlay.MyApp.ActionBar"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:popupTheme="@style/PopupTheme" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="368dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:background="#FF909090"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnSignOut" />
+
+        <Button
+            android:id="@+id/btnSignOut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@color/colorPrimary"
+            android:padding="8dp"
+            android:text="Sign out"
+            android:textColor="@android:color/white"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnSignIn" />
+
+        <EditText
+            android:id="@+id/editTextEmail"
+            android:layout_width="269dp"
+            android:layout_height="39dp"
+            android:layout_marginTop="4dp"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextLastName" />
+
+        <EditText
+            android:id="@+id/editTextFirstName"
+            android:layout_width="267dp"
+            android:layout_height="41dp"
+            android:layout_marginTop="16dp"
+            android:hint="First name"
+            android:inputType="textPersonName"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/view" />
+
+        <EditText
+            android:id="@+id/editTextLastName"
+            android:layout_width="268dp"
+            android:layout_height="39dp"
+            android:layout_marginTop="4dp"
+            android:hint="Last name"
+            android:inputType="text"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextFirstName" />
+
+        <com.google.android.gms.common.SignInButton
+            android:id="@+id/btnSignIn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbarNewUser" />
+
+        <EditText
+            android:id="@+id/editTextStreetAddress"
+            android:layout_width="271dp"
+            android:layout_height="37dp"
+            android:layout_marginTop="4dp"
+            android:hint="Street address"
+            android:inputType="text"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextPhoneNumber" />
+
+        <EditText
+            android:id="@+id/editTextZipCode"
+            android:layout_width="269dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="4dp"
+            android:hint="Zip code"
+            android:inputType="number"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextStreetAddress" />
+
+        <EditText
+            android:id="@+id/editTextCity"
+            android:layout_width="270dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="4dp"
+            android:hint="City"
+            android:inputType="textPersonName"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextZipCode" />
+
+        <Button
+            android:id="@+id/btnSaveUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@color/colorPrimary"
+            android:padding="8dp"
+            android:text="Save"
+            android:textColor="@android:color/white"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="368dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:background="#FF909090"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spinnerUserState" />
+
+        <EditText
+            android:id="@+id/editTextPhoneNumber"
+            android:layout_width="269dp"
+            android:layout_height="38dp"
+            android:layout_marginTop="4dp"
+            android:hint="Phone number"
+            android:inputType="text"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextEmail" />
+
+        <Spinner
+            android:id="@+id/spinnerUserState"
+            android:layout_width="268dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="4dp"
+            android:dropDownHorizontalOffset="0sp"
+            android:spinnerMode="dialog"
+            android:textSize="12sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextCity" />
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>
